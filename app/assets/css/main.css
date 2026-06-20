@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+    --font-lora: "Lora", serif;
+    --font-space-grotesk: "Space Grotesk", sans-serif;
+    --font-anuphan: "Anuphan", sans-serif;
+    --font-ibm-plex-mono: "IBM Plex Mono", monospace;
+    --font-ibm-plex-sans-thai: "IBM Plex Sans Thai", sans-serif;
+
+    --color-re-normal: #fef9ef;
+    --color-re-primary: #feecc7;
+    --color-re-primary-alt: #fed787;
+    --color-re-success: #ddff95;
+    --color-re-success-alt: #baf341;
+    --color-re-fail: #ff9b94;
+    --color-re-fail-alt: #f34141;
+    --color-re-warning: #fcaa3b;
+    --color-re-warning-alt: #eb730b;
+    --color-re-disabled: #e1d9c8;
+    --color-re-text: #8f5c4d;
+    --color-re-text-alt: #461102;
+    --color-re-highlight: #ffce68;
+    --color-re-shadow: #3b3a36;
+
+    --breakpoint-3xl: 108rem;
+}
+
+body {
+    background-color: var(--color-re-normal);
+}
+
+@layer components {
+    .vision-px {
+        @apply px-6 sm:px-16 md:px-22 lg:px-26 xl:px-32 2xl:px-46 3xl:px-64;
+    }
+}
