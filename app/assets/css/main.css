@@ -35,7 +35,27 @@ body {
 }
 
 @layer components {
-    .vision-px {
-        @apply px-6;
+    .btn-primary {
+        @apply bg-re-primary text-black hover:opacity-90;
+    }
+    .btn-fail {
+        @apply bg-re-fail-alt text-white hover:bg-re-fail;
+    }
+    .btn-outline {
+        @apply bg-transparent text-black border border-black hover:bg-black hover:text-white;
+    }
+
+    .btn-sm {
+        @apply text-sm min-h-8;
+    }
+    .btn-md {
+        @apply text-base min-h-9;
+    }
+    .btn-lg {
+        @apply text-lg min-h-11;
+    }
+
+    .vision-padding-x {
+        @apply px-6 sm:px-16 md:px-22 lg:px-26 xl:px-32 2xl:px-46 3xl:px-54;
     }
 }

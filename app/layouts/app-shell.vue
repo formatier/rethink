@@ -13,17 +13,12 @@ const sections = [
         links: [
             {
                 icon: "ph:shield-plus",
-                pageID: "manage-privacy",
+                pageID: "manage",
                 label: "Manage Privacy",
             },
             {
-                icon: "ph:cookie",
-                pageID: "manage-cookies",
-                label: "Manage Cookies",
-            },
-            {
                 icon: "ph:jar-label",
-                pageID: "manage-cookie-jar",
+                pageID: "cookie-jar",
                 label: "Manage Cookie Jar",
             },
         ],
@@ -44,12 +39,32 @@ const sections = [
             {
                 icon: "ph:book",
                 pageID: "document",
-                label: "Document",
+                label: "Documents",
             },
             {
                 icon: "ph:circle-wavy-question",
                 pageID: "help",
                 label: "Help",
+            },
+        ],
+    },
+    {
+        title: "Terms",
+        links: [
+            {
+                icon: "ph:book-open-text",
+                pageID: "rule",
+                label: "Rules",
+            },
+            {
+                icon: "ph:book-open-text",
+                pageID: "privacy-policy",
+                label: "Privacy Policy",
+            },
+            {
+                icon: "ph:book-open-text",
+                pageID: "terms-of-service",
+                label: "Terms of Service",
             },
         ],
     },
@@ -85,6 +100,11 @@ const sections = [
                 >
                     {{ link.label }}
                 </UiSidebarItem>
+            </UiSidebarSection>
+            <UiSidebarSection>
+                <button class="btn-fail btn-md font-space-grotesk rounded-full">
+                    Sign Out
+                </button>
             </UiSidebarSection>
         </UiSidebar>
         <slot></slot>

@@ -18,9 +18,9 @@ const isActive = computed(() => {
 
 <template>
     <NuxtLink
-        class="isolate hover:z-10 flex py-2 px-4 gap-4 items-center text-black rounded-full select-none"
+        class="isolate hover:z-10 flex py-2 px-4 gap-4 items-center text-black rounded-full select-none transition-all duration-50"
         :class="isActive ? 'bg-re-primary' : 'hover:bg-gray-200'"
-        :to="`/${props.pageID}`"
+        :to="`/${props.pageID == 'home' ? '' : props.pageID}`"
     >
         <Icon :name="props.icon" class="size-6"></Icon>
         <span class="font-space-grotesk text-md">
