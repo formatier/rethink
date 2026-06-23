@@ -1,5 +1,5 @@
 <template>
-    <ul class="flex">
+    <div class="flex pl-64">
         <slot></slot>
-    </ul>
+    </div>
 </template>

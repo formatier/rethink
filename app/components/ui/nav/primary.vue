@@ -1,5 +1,12 @@
 <template>
-    <ul>
+    <ul class="flex">
+        <li>
+            <NuxtLink to="/">
+                <span class="font-lora text-3xl font-bold text-re-primary-alt"
+                    >Rethink</span
+                >
+            </NuxtLink>
+        </li>
         <slot></slot>
     </ul>
 </template>
