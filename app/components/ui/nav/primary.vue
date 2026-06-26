@@ -1,5 +1,15 @@
+<script lang="ts" setup>
+const { state: mobileSidebarOpenState, toggler: toggleMobileSidebar } =
+    useMobileSidebar();
+</script>
+
 <template>
-    <ul class="flex">
+    <ul class="flex items-center gap-4">
+        <li class="lg:hidden">
+            <button @click="toggleMobileSidebar" class="flex items-center">
+                <Icon name="ph:list" class="size-6"></Icon>
+            </button>
+        </li>
         <li>
             <NuxtLink to="/">
                 <span

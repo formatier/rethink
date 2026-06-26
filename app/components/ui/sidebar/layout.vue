@@ -1,5 +1,5 @@
 <template>
-    <div class="flex pl-64">
+    <div class="flex transition-all ease-in-out lg:pl-64">
         <slot></slot>
     </div>
 </template>
