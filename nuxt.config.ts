@@ -14,15 +14,15 @@ export default defineNuxtConfig({
   },
 
   css: ["./app/assets/css/main.css"],
-  modules: ["@nuxt/fonts", "@nuxt/icon"],
+  modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image"],
 
   icon: {
     mode: "css",
     cssLayer: "base",
     customCollections: [
       {
-        prefix: "logos",
-        dir: resolve("./app/assets/logos"),
+        prefix: "re",
+        dir: resolve("./app/assets/re"),
       },
     ],
   },

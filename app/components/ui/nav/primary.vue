@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const { state: mobileSidebarOpenState, toggler: toggleMobileSidebar } =
-    useMobileSidebar();
+const { toggler: toggleMobileSidebar } = useMobileSidebar();
 </script>
 
 <template>
@@ -10,14 +9,9 @@ const { state: mobileSidebarOpenState, toggler: toggleMobileSidebar } =
                 <Icon name="ph:list" class="size-6"></Icon>
             </button>
         </li>
-        <li>
-            <NuxtLink to="/">
-                <span
-                    class="font-lora text-3xl font-bold text-re-primary-alt select-none"
-                    >Rethink</span
-                >
-            </NuxtLink>
-        </li>
+        <NuxtLink to="/" class="h-9 w-27">
+            <Icon name="re:logo" class="w-full h-full"></Icon>
+        </NuxtLink>
         <slot></slot>
     </ul>
 </template>
