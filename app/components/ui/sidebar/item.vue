@@ -22,7 +22,10 @@ const isActive = computed(() => {
         :class="isActive ? 'bg-re-primary' : 'hover:bg-gray-200'"
         :to="`/${props.pageID == 'home' ? '' : props.pageID}`"
     >
-        <Icon :name="props.icon" class="size-6"></Icon>
+        <Icon
+            :name="props.icon + (isActive ? '-fill' : '')"
+            class="size-6"
+        ></Icon>
         <span class="font-space-grotesk text-md">
             <slot></slot>
         </span>

@@ -8,7 +8,7 @@ const props = defineProps({
 
 <template>
     <div
-        class="bg-white rounded-xl shadow-md border-gray-100 border"
+        class="bg-white rounded-xl shadow-md hover:shadow-lg border-gray-100 border transition-shadow"
         :class="props.class"
     >
         <slot></slot>

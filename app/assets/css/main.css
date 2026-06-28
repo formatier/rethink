@@ -35,6 +35,10 @@ body {
 }
 
 @layer components {
+    .btn {
+        @apply px-4 rounded-lg min-w-16 inline-flex items-center justify-center cursor-pointer select-none;
+    }
+
     .btn-primary {
         @apply bg-re-primary text-black hover:opacity-90;
     }
