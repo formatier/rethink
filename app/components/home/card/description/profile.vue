@@ -12,7 +12,10 @@ const props = defineProps({
 </script>
 
 <template>
-    <NuxtLink class="inline-flex items-center gap-2 hover:underline">
+    <NuxtLink
+        class="inline-flex items-center gap-2 hover:underline"
+        :to="`/profile/${props.userName}`"
+    >
         <NuxtImg class="size-8 rounded-full" :src="props.src"> </NuxtImg>
         <p class="font-ibm-plex-mono text-sm">
             <slot></slot>

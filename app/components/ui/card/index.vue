@@ -1,15 +1,16 @@
 <script setup lang="ts">
 const props = defineProps({
-    class: {
-        type: String,
+    boostShadowWhileHover: {
+        type: Boolean,
+        default: false,
     },
 });
 </script>
 
 <template>
     <div
-        class="bg-white rounded-xl shadow-md hover:shadow-lg border-gray-100 border transition-shadow"
-        :class="props.class"
+        class="bg-white rounded-xl shadow-md border-gray-100 border transition-shadow"
+        :class="{ 'hover:shadow-lg': props.boostShadowWhileHover }"
     >
         <slot></slot>
     </div>
