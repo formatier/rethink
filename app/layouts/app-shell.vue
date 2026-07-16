@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+const { authStatus } = useAuth();
+
 const links = [
     { icon: "ph:house", pageID: "home", label: "Home" },
     { icon: "ph:users-three", pageID: "rooms", label: "Rooms" },
@@ -72,6 +74,10 @@ const sections = [
 </script>
 
 <template>
+    <div
+        class="fixed w-dvw h-dvh bg-re-shadow/50 z-1001"
+        v-if="authStatus == 'in-auth'"
+    ></div>
     <UiNav>
         <UiNavPrimary>
             <UiNavList> </UiNavList>

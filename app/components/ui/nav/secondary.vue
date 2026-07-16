@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { isAuth } = useAuth();
+const { isAuth, openAuth } = useAuth();
 </script>
 
 <template>
@@ -7,12 +7,12 @@ const { isAuth } = useAuth();
         <slot></slot>
         <li v-if="isAuth"></li>
         <li v-else>
-            <NuxtLink
+            <button
                 class="btn btn-primary btn-sm rounded-full font-space-grotesk"
-                to="/auth/signin"
+                @click="openAuth()"
             >
-                Signin
-            </NuxtLink>
+                Sign In
+            </button>
         </li>
     </ul>
 </template>

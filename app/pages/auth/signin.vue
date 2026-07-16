@@ -1,3 +1,9 @@
+<script setup lang="ts">
+onMounted(() => {
+    useAuthDataHook();
+});
+</script>
+
 <template>
     <div class="flex items-center justify-center flex-col py-8 px-4 gap-8">
         <h1 class="text-3xl font-bold font-space-grotesk">
@@ -13,7 +19,11 @@
                         >
                             email or username
                         </UiFormInput>
-                        <UiFormInput placeholder="Password" type="password">
+                        <UiFormInput
+                            placeholder="Password"
+                            type="password"
+                            nullable
+                        >
                             password
                         </UiFormInput>
                     </UiFormGroup>
@@ -26,13 +36,13 @@
             <HomeCardDivider></HomeCardDivider>
             <UiCardContainer class="py-6">
                 <div class="flex flex-col gap-4">
-                    <AuthButtonProvider icon="devicon:google">
+                    <AuthButtonProvider icon="devicon:google" provider="google">
                         Continue with Google
                     </AuthButtonProvider>
-                    <AuthButtonProvider icon="devicon:github">
+                    <AuthButtonProvider icon="devicon:github" provider="github">
                         Continue with GitHub
                     </AuthButtonProvider>
-                    <AuthButtonProvider icon="devicon:slack">
+                    <AuthButtonProvider icon="devicon:slack" provider="slack">
                         Continue with Slack
                     </AuthButtonProvider>
                 </div>
